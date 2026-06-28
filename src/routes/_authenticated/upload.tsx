@@ -1,7 +1,14 @@
 import { createFileRoute, useNavigate } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Upload as UploadIcon, X, Loader2, Image as ImageIcon, Sparkles, FileImage } from "lucide-react";
+import {
+  Upload as UploadIcon,
+  X,
+  Loader2,
+  Image as ImageIcon,
+  Sparkles,
+  FileImage,
+} from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
@@ -92,7 +99,9 @@ function UploadPage() {
     <div className="hero-radial">
       <div className="mx-auto w-full max-w-4xl px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="text-center">
-          <p className="font-mono text-xs uppercase tracking-widest text-thread">Step 01 · Upload</p>
+          <p className="font-mono text-xs uppercase tracking-widest text-thread">
+            Step 01 · Upload
+          </p>
           <h1 className="mt-3 font-display text-4xl sm:text-5xl">Drop a fabric photo.</h1>
           <p className="mt-3 text-sm text-muted-foreground">PNG, JPEG, or WEBP · up to 10 MB</p>
         </div>
@@ -122,7 +131,9 @@ function UploadPage() {
               }}
               whileHover={{ scale: 1.005 }}
               className={`relative w-full rounded-3xl border-2 border-dashed p-12 sm:p-16 text-center transition-colors ${
-                dragOver ? "border-thread bg-thread/5" : "border-border bg-card/40 hover:border-thread/60"
+                dragOver
+                  ? "border-thread bg-thread/5"
+                  : "border-border bg-card/40 hover:border-thread/60"
               }`}
             >
               <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl gradient-thread glow-thread">
@@ -144,10 +155,14 @@ function UploadPage() {
                 exit={{ opacity: 0 }}
                 className="rounded-3xl border bg-card overflow-hidden"
               >
-                <div className="grid sm:grid-cols-[1fr_1.2fr]">
-                  <div className="relative aspect-square bg-muted">
+                <div className="grid grid-cols-1 lg:grid-cols-[250px_1fr] gap-6">
+                  <div className="relative aspect-square bg-muted max-w-[250px]">
                     {preview && (
-                      <img src={preview} alt="Fabric preview" className="absolute inset-0 h-full w-full object-cover" />
+                      <img
+                        src={preview}
+                        alt="Fabric preview"
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
                     )}
                   </div>
                   <div className="p-6 flex flex-col">
@@ -155,10 +170,14 @@ function UploadPage() {
                       <div className="grid h-10 w-10 place-items-center rounded-lg gradient-thread shrink-0">
                         <FileImage className="h-5 w-5 text-[color:var(--accent-foreground)]" />
                       </div>
-                      <div className="min-w-0 flex-1">
-                        <p className="font-medium truncate">{file.name}</p>
+                      <div className="flex-1 min-w-0">
+                        <p className="font-medium max-w-[280px] truncate" title={file.name}>
+                          {file.name.length > 35 ? file.name.substring(0, 35) + "..." : file.name}
+                        </p>
+
                         <p className="text-xs font-mono text-muted-foreground mt-1">
-                          {(file.size / 1024 / 1024).toFixed(2)} MB · {file.type.replace("image/", "").toUpperCase()}
+                          {(file.size / 1024 / 1024).toFixed(2)} MB ·{" "}
+                          {file.type.replace("image/", "").toUpperCase()}
                         </p>
                       </div>
                       {phase === "idle" && (
@@ -177,8 +196,8 @@ function UploadPage() {
                         <Progress value={progress} />
                         {phase === "analyzing" && (
                           <p className="text-xs text-muted-foreground flex items-center gap-2 mt-3">
-                            <Loader2 className="h-3 w-3 animate-spin text-thread" /> Vision model is examining the
-                            weave — usually under 5s.
+                            <Loader2 className="h-3 w-3 animate-spin text-thread" /> Vision model is
+                            examining the weave — usually under 5s.
                           </p>
                         )}
                       </div>
