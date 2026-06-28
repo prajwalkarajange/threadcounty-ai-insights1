@@ -17,11 +17,17 @@ export type AnalysisPayload = {
 };
 
 const SYSTEM_PROMPT = `
-You are an expert Textile Engineer.
+You are an expert Textile Engineer and Fabric Quality Inspector.
 
-Analyze the uploaded fabric image.
+Analyze the uploaded fabric image carefully.
 
-Return ONLY valid JSON.
+Return ONLY a valid JSON object.
+
+Do NOT return markdown.
+Do NOT return explanation.
+Do NOT wrap inside \`\`\`json.
+
+The JSON format MUST be:
 
 {
   "fabric_type": "",
@@ -50,43 +56,77 @@ export async function analyzeFabricImage(
     apiKey,
   });
 
-  const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
-    contents: [
-      {
-        role: "user",
-        parts: [
-          {
-            text: SYSTEM_PROMPT,
-          },
-          {
-            fileData: {
-              fileUri: imageUrl,
-              mimeType,
+  let response;
+
+  try {
+    response = await ai.models.generateContent({
+      model: "gemini-2.5-flash",
+      contents: [
+        {
+          role: "user",
+          parts: [
+            {
+              text: SYSTEM_PROMPT,
             },
-          },
-        ],
-      },
-    ],
-  });
+            {
+              fileData: {
+                fileUri: imageUrl,
+                mimeType,
+              },
+            },
+          ],
+        },
+      ],
+    });
+  } catch (err) {
+    const message = err instanceof Error ? err.message : String(err);
 
-const text = response.text;
+    console.error("Gemini API Error:", message);
 
-if (!text) {
-  throw new Error("Gemini returned an empty response.");
-}
+    if (
+      message.includes("503") ||
+      message.includes("UNAVAILABLE") ||
+      message.includes("high demand")
+    ) {
+      throw new Error(
+        "Gemini AI is currently busy. Please wait a few seconds and try again."
+      );
+    }
 
-// Remove markdown code fences if Gemini includes them
-const cleanJson = text
-  .replace(/```json\s*/gi, "")
-  .replace(/```/g, "")
-  .trim();
+    if (message.includes("429")) {
+      throw new Error(
+        "Gemini API rate limit reached. Please try again later."
+      );
+    }
 
-try {
-  return JSON.parse(cleanJson) as AnalysisPayload;
-} catch (err) {
-  console.error("Gemini response:");
-  console.error(text);
-  throw new Error("Gemini returned invalid JSON.");
-}
+    if (message.includes("401") || message.includes("403")) {
+      throw new Error(
+        "Invalid Gemini API key. Please check your configuration."
+      );
+    }
+
+    throw new Error("Failed to analyze image. Please try again.");
+  }
+
+  const text = response.text;
+
+  if (!text) {
+    throw new Error("Gemini returned an empty response.");
+  }
+
+  const cleanJson = text
+    .replace(/```json\s*/gi, "")
+    .replace(/```/g, "")
+    .trim();
+
+  try {
+    return JSON.parse(cleanJson) as AnalysisPayload;
+  } catch {
+    console.error("Gemini Raw Response:");
+    console.error(text);
+
+    throw new Error(
+      "Gemini returned an unexpected response. Please try again."
+    );
+  }
 }

@@ -1,5 +1,5 @@
 import { createFileRoute, Link, useNavigate, useSearch } from "@tanstack/react-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { z } from "zod";
 import { motion } from "framer-motion";
 import { Sparkles, Loader2, Mail, Lock } from "lucide-react";
@@ -36,6 +36,17 @@ function AuthPage() {
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [loading, setLoading] = useState(false);
+  useEffect(() => {
+  const {
+    data: { subscription },
+  } = supabase.auth.onAuthStateChange((event) => {
+    if (event === "PASSWORD_RECOVERY") {
+      navigate({ to: "/reset-password" });
+    }
+  });
+
+  return () => subscription.unsubscribe();
+}, [navigate]);
 
   async function onSignIn(e: React.FormEvent) {
     e.preventDefault();
@@ -67,7 +78,7 @@ function AuthPage() {
   async function onForgot(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    const { error } = await supabase.auth.resetPasswordForEmail(email, {
+    const { error } = await supabase.auth.resetPasswordForEmail(email.trim(), {
       redirectTo: typeof window !== "undefined" ? `${window.location.origin}/reset-password` : undefined,
     });
     setLoading(false);
