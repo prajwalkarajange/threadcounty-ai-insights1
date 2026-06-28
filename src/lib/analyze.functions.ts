@@ -1,4 +1,5 @@
 import { createServerFn } from "@tanstack/react-start";
+import { analyzeFabricImage } from "@/services/gemini";
 import { requireSupabaseAuth } from "@/integrations/supabase/auth-middleware";
 import { z } from "zod";
 
@@ -56,49 +57,9 @@ export const analyzeUpload = createServerFn({ method: "POST" })
       .createSignedUrl(upload.storage_path, 60 * 10);
     if (signErr || !signed?.signedUrl) throw new Error("Could not sign image URL");
 
-    const apiKey = process.env.LOVABLE_API_KEY;
-    if (!apiKey) throw new Error("AI gateway not configured");
+    const parsed = await analyzeFabricImage(signed.signedUrl, upload.mime_type ?? "image/jpeg");
 
-    // 3. Call Lovable AI Gateway directly (chat completions with vision)
-    const aiRes = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "Lovable-API-Key": apiKey,
-      },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          {
-            role: "user",
-            content: [
-              { type: "text", text: "Analyze this fabric sample and return JSON only." },
-              { type: "image_url", image_url: { url: signed.signedUrl } },
-            ],
-          },
-        ],
-        response_format: { type: "json_object" },
-      }),
-    });
-
-    if (!aiRes.ok) {
-      const body = await aiRes.text();
-      if (aiRes.status === 429) throw new Error("AI rate limit reached. Please retry shortly.");
-      if (aiRes.status === 402) throw new Error("AI credits exhausted. Please add credits in workspace settings.");
-      throw new Error(`AI error ${aiRes.status}: ${body.slice(0, 200)}`);
-    }
-
-    const json = await aiRes.json();
-    const raw = json?.choices?.[0]?.message?.content;
-    if (!raw) throw new Error("Empty AI response");
-
-    let parsed: AnalysisPayload;
-    try {
-      parsed = typeof raw === "string" ? JSON.parse(raw) : raw;
-    } catch {
-      throw new Error("Could not parse AI response as JSON");
-    }
+    const json = parsed;
 
     // 4. Persist
     const { data: inserted, error: insErr } = await supabase
