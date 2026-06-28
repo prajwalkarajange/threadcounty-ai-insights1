@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /auth
+Disallow: /reset-password
+Disallow: /upload
+Disallow: /history
+Disallow: /dashboard
+Disallow: /analysis/
