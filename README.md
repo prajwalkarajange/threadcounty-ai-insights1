@@ -1,6 +1,4 @@
-
 <p align="center">
-
 
 <img src="https://img.shields.io/badge/React-19-blue?logo=react">
 
@@ -12,13 +10,10 @@
 
 <img src="https://img.shields.io/badge/Gemini-AI-orange">
 
-<img src="https://img.shields.io/badge/License-MIT-green">
-
 </p>
 
 <img src="./README/banner.png" width="100%">
 
-</p>
 
 <h1 align="center">
 🧵 ThreadCounty
@@ -52,14 +47,14 @@ Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
 
 ## ⭐ Project Highlights
 
-* 🤖 AI Fabric Analysis using Gemini AI
-* 📊 Interactive Analytics Dashboard
-* 👨‍💻 Complete Admin Panel
-* 🔐 Secure Authentication
-* 📄 PDF Report Generation
-* 📱 Fully Responsive Design
-* 🌙 Dark / Light Theme
-* ⚡ Built with Modern React Stack
+- 🤖 AI Fabric Analysis using Gemini AI
+- 📊 Interactive Analytics Dashboard
+- 👨‍💻 Complete Admin Panel
+- 🔐 Secure Authentication
+- 📄 PDF Report Generation
+- 📱 Fully Responsive Design
+- 🌙 Dark / Light Theme
+- ⚡ Production-Ready Full Stack Web Application
 
 # 📑 Table of Contents
 
@@ -76,16 +71,6 @@ Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
 - Developer
 
 
-## 🌐 Live Demo
-
-🚀 **Website**
-
-https://threadcounty-ai-insights1.vercel.app/
-
-💻 **GitHub Repository**
-
-https://github.com/prajwalkarajange/threadcounty-ai-insights1
-
 <p align="center">
 
 <img src="https://img.shields.io/github/stars/prajwalkarajange/threadcounty-ai-insights1?style=social">
@@ -101,99 +86,120 @@ https://github.com/prajwalkarajange/threadcounty-ai-insights1
 
 **ThreadCounty** is a modern AI-powered textile analysis platform designed for textile manufacturers, students, researchers, and quality control professionals.
 
-Users can upload a fabric image and instantly receive AI-generated insights including:
+Users can securely upload fabric images and receive AI-powered textile insights including fabric identification, quality evaluation, weave analysis, confidence scoring, and downloadable reports through an intuitive web interface.
 
-* Fabric Type
-* Quality Score
-* Confidence Score
-* Texture Analysis
-* Color Analysis
-* Weave Pattern
-* Recommendations
-* PDF Report
+- Fabric Type
+- Quality Score
+- Confidence Score
+- Texture Analysis
+- Color Analysis
+- Weave Pattern
+- Recommendations
+- PDF Report
 
 The platform combines a modern SaaS interface with secure authentication, analytics, role-based administration, and a responsive design.
 
 ---
+## 🏆 Hackathon Submission
+
+| Category | Details |
+|----------|---------|
+| Event | ThreadCounty Web Development Hackathon 2026 |
+| Project | ThreadCounty |
+| Type | Full Stack Web Application |
+| Deployment | Vercel |
+| Backend | Supabase |
+| Frontend | React + TypeScript |
 
 # 🚀 Key Features
 
 ### 👤 Authentication
 
-* Secure Login
-* User Registration
-* Protected Routes
-* Role-Based Access
-* Session Management
+- Secure Login
+- User Registration
+- Protected Routes
+- Role-Based Access
+- Session Management
 
 ---
 
 ### 🧵 AI Fabric Analysis
 
-* Upload Fabric Images
-* AI-Based Fabric Identification
-* Confidence Score
-* Quality Score
-* Texture Detection
-* Color Analysis
-* Weave Pattern Detection
-* Recommendations
-* PDF Export
+- Upload Fabric Images
+- AI-Based Fabric Identification
+- Confidence Score
+- Quality Score
+- Texture Detection
+- Color Analysis
+- Weave Pattern Detection
+- Recommendations
+- PDF Export
 
 ---
 
 ### 📚 Upload History
 
-* Search Reports
-* Card View
-* Table View
-* Delete Reports
-* View Detailed Analysis
+- Search Reports
+- Card View
+- Table View
+- Delete Reports
+- View Detailed Analysis
 
 ---
 
 ### 📊 User Dashboard
 
-* Total Uploads
-* Recent Activity
-* Average Quality
-* Quality Graph
-* Quick Navigation
+- Total Uploads
+- Recent Activity
+- Average Quality
+- Quality Graph
+- Quick Navigation
 
 ---
 
 ### 🛠 Admin Dashboard
 
-* User Management
-* Upload Management
-* AI Analysis Management
-* Analytics Dashboard
-* Platform Statistics
+- User Management
+- Upload Management
+- AI Analysis Management
+- Analytics Dashboard
+- Platform Statistics
 
 ---
 
 ### 📈 Analytics
 
-* Total Users
-* Total Uploads
-* Total AI Analyses
-* Average Quality
-* Fabric Distribution
-* AI Statistics
-* Recent Activity
+- Total Users
+- Total Uploads
+- Total AI Analyses
+- Average Quality
+- Fabric Distribution
+- AI Statistics
+- Recent Activity
 
 ---
 
 ### 🎨 UI / UX
 
-* Responsive Design
-* Mobile Friendly
-* Dark Mode
-* Light Mode
-* Modern SaaS Layout
-* Smooth Animations
+- Responsive Design
+- Mobile Friendly
+- Dark Mode
+- Light Mode
+- Modern SaaS Layout
+- Smooth Animations
 
 ---
+
+
+## 🛠 Tech Stack
+
+| Frontend     | Backend                 | Database     | AI                 | Deployment |
+| ------------ | ----------------------- | ------------ | ------------------ | ---------- |
+| React 19     | Supabase Edge Functions | PostgreSQL   | Gemini AI          | Vercel     |
+| TypeScript   | Supabase Auth           | Supabase     | Google Gemini AI   | GitHub     |
+| Tailwind CSS | REST APIs               | Storage      | Prompt Engineering | GitHub     |
+| ShadCN UI    | Role Based Auth         | RLS Policies | AI Reports         | Production |
+
 # ⚙️ Installation
 
 ```bash
@@ -206,46 +212,61 @@ npm install
 npm run dev
 ```
 
-## 🛠 Tech Stack
 
-| Frontend     | Backend                 | Database     | AI                 | Deployment |
-| ------------ | ----------------------- | ------------ | ------------------ | ---------- |
-| React 19     | Supabase Edge Functions | PostgreSQL   | Gemini AI          | Vercel     |
-| TypeScript   | Supabase Auth           | Supabase     | AI Vision          | GitHub     |
-| Tailwind CSS | REST APIs               | Storage      | Prompt Engineering | CI/CD      |
-| ShadCN UI    | Role Based Auth         | RLS Policies | AI Reports         | Production |
+# 🔐 Environment Variables
+
+```env
+VITE_SUPABASE_URL=
+
+VITE_SUPABASE_ANON_KEY=
+
+VITE_GEMINI_API_KEY=
+```
 
 # 📂 Project Structure
 
 ```text
 threadcounty-ai-insights1
 │
-├── public/
 ├── README/
+├── public/
 ├── src/
 │   ├── components/
-│   ├── pages/
 │   ├── hooks/
+│   ├── integrations/
+│   ├── routes/
+│   ├── styles/
 │   ├── lib/
-│   ├── services/
-│   └── contexts/
+│   ├── assets/
+│   └── utils/
 ├── supabase/
 ├── package.json
 └── README.md
 ```
+
 # 📌 Project at a Glance
 
-| Feature | Status |
-|----------|--------|
-| Authentication | ✅ |
-| AI Fabric Analysis | ✅ |
-| Upload History | ✅ |
-| Admin Dashboard | ✅ |
-| Analytics | ✅ |
-| PDF Export | ✅ |
-| Responsive Design | ✅ |
-| Dark / Light Mode | ✅ |
-| Mobile Friendly | ✅ |
+| Feature            | Status |
+| ------------------ | ------ |
+| Authentication     | ✅     |
+| AI Fabric Analysis | ✅     |
+| Upload History     | ✅     |
+| Admin Dashboard    | ✅     |
+| Analytics          | ✅     |
+| PDF Export         | ✅     |
+| Responsive Design  | ✅     |
+| Dark / Light Mode  | ✅     |
+| Mobile Friendly    | ✅     |
+
+## 📈 Platform Statistics
+
+- 10+ Responsive Pages
+- 25+ Reusable Components
+- Secure Authentication
+- AI Powered Analysis
+- Responsive Dashboard
+- Admin Analytics
+- Mobile Responsive
 
 # 📸 Application Preview
 
@@ -367,10 +388,10 @@ threadcounty-ai-insights1
 
 ## Tables
 
-* profiles
-* uploads
-* analysis_results
-* user_roles
+- profiles
+- uploads
+- analysis_results
+- user_roles
 
 ---
 
@@ -435,17 +456,18 @@ Display Dashboard
 ✔ Role-Based Access
 
 ---
+
 ## 🎯 Vision
 
 ThreadCounty aims to modernize textile quality inspection by combining Artificial Intelligence, Computer Vision, and cloud technologies into a single intuitive platform.
 
 The platform helps:
 
-* Textile Manufacturers
-* Researchers
-* Students
-* Quality Control Engineers
-* Fabric Designers
+- Textile Manufacturers
+- Researchers
+- Students
+- Quality Control Engineers
+- Fabric Designers
 
 analyze fabrics quickly, accurately, and efficiently.
 
@@ -478,6 +500,19 @@ analyze fabrics quickly, accurately, and efficiently.
 - AI Comparison Tool
 - Fabric Recommendation Engine
 
+## 🙏 Acknowledgements
+
+This project was developed for the ThreadCounty Web Development Hackathon 2026.
+
+Special thanks to:
+
+- React
+- Supabase
+- Tailwind CSS
+- ShadCN UI
+- Google Gemini AI
+- ThreadCounty Team
+
 # 👨‍💻 Developer
 
 **Prajwal Karajange**
@@ -494,13 +529,14 @@ Passionate about AI, Cloud, and Scalable Web Applications
 
 ### Connect
 
-* GitHub: https://github.com/prajwalkarajange
-* LinkedIn: https://www.linkedin.com/in/prajwalkarajange
+- GitHub: https://github.com/prajwalkarajange
+- LinkedIn: https://www.linkedin.com/in/prajwalkarajange
 
 ---
 
 If you found this project interesting, consider giving it a ⭐ on GitHub.
 ---
+
 ## 📄 License
 
 This project is developed for the **ThreadCounty Web Development Hackathon 2026**.
@@ -516,4 +552,3 @@ Created by Prajwal Karajange
 ⭐ Thank you for visiting this repository.
 
 </p>
-
