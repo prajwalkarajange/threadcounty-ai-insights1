@@ -1,18 +1,80 @@
-# 🧵 ThreadCounty – AI-Powered Textile Analysis Platform
 
 <p align="center">
 
-![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge\&logo=react)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge\&logo=typescript)
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge\&logo=supabase)
-![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge\&logo=tailwindcss)
-![ShadCN](https://img.shields.io/badge/ShadCN_UI-000000?style=for-the-badge)
-![Gemini AI](https://img.shields.io/badge/Gemini-AI-orange?style=for-the-badge)
-![Vercel](https://img.shields.io/badge/Deploy-Vercel-black?style=for-the-badge\&logo=vercel)
+
+<img src="https://img.shields.io/badge/React-19-blue?logo=react">
+
+<img src="https://img.shields.io/badge/TypeScript-5-blue?logo=typescript">
+
+<img src="https://img.shields.io/badge/Tailwind-CSS-38BDF8?logo=tailwindcss">
+
+<img src="https://img.shields.io/badge/Supabase-Database-3FCF8E?logo=supabase">
+
+<img src="https://img.shields.io/badge/Gemini-AI-orange">
+
+<img src="https://img.shields.io/badge/License-MIT-green">
+
+</p>
+
+<img src="./README/banner.png" width="100%">
+
+</p>
+
+<h1 align="center">
+🧵 ThreadCounty
+</h1>
+
+<h3 align="center">
+
+AI-Powered Textile Analysis Platform for Smart Fabric Quality Inspection
+
+</h3>
+
+<p align="center">
+
+Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
+
+</p>
+
+<p align="center">
+
+<a href="https://threadcounty-ai-insights1.vercel.app">
+<img src="https://img.shields.io/badge/🚀_Live_Demo-Visit-orange?style=for-the-badge">
+</a>
+
+<a href="https://github.com/prajwalkarajange/threadcounty-ai-insights1">
+<img src="https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github">
+</a>
 
 </p>
 
 ---
+
+## ⭐ Project Highlights
+
+* 🤖 AI Fabric Analysis using Gemini AI
+* 📊 Interactive Analytics Dashboard
+* 👨‍💻 Complete Admin Panel
+* 🔐 Secure Authentication
+* 📄 PDF Report Generation
+* 📱 Fully Responsive Design
+* 🌙 Dark / Light Theme
+* ⚡ Built with Modern React Stack
+
+# 📑 Table of Contents
+
+- Live Demo
+- About
+- Features
+- Tech Stack
+- Screenshots
+- Architecture
+- Database
+- AI Workflow
+- Admin Features
+- Vision
+- Developer
+
 
 ## 🌐 Live Demo
 
@@ -24,6 +86,15 @@ https://threadcounty-ai-insights1.vercel.app/
 
 https://github.com/prajwalkarajange/threadcounty-ai-insights1
 
+<p align="center">
+
+<img src="https://img.shields.io/github/stars/prajwalkarajange/threadcounty-ai-insights1?style=social">
+
+<img src="https://img.shields.io/github/forks/prajwalkarajange/threadcounty-ai-insights1?style=social">
+
+<img src="https://img.shields.io/github/last-commit/prajwalkarajange/threadcounty-ai-insights1">
+
+</p>
 ---
 
 # ✨ About The Project
@@ -123,22 +194,59 @@ The platform combines a modern SaaS interface with secure authentication, analyt
 * Smooth Animations
 
 ---
+# ⚙️ Installation
 
-# 🛠 Tech Stack
+```bash
+git clone https://github.com/prajwalkarajange/threadcounty-ai-insights1
 
-| Category       | Technology            |
-| -------------- | --------------------- |
-| Frontend       | React 19 + TypeScript |
-| Routing        | TanStack Router       |
-| Styling        | Tailwind CSS          |
-| Components     | ShadCN UI             |
-| Backend        | Supabase              |
-| Authentication | Supabase Auth         |
-| Database       | PostgreSQL (Supabase) |
-| AI             | Gemini AI             |
-| Deployment     | Vercel                |
+cd threadcounty-ai-insights1
 
----
+npm install
+
+npm run dev
+```
+
+## 🛠 Tech Stack
+
+| Frontend     | Backend                 | Database     | AI                 | Deployment |
+| ------------ | ----------------------- | ------------ | ------------------ | ---------- |
+| React 19     | Supabase Edge Functions | PostgreSQL   | Gemini AI          | Vercel     |
+| TypeScript   | Supabase Auth           | Supabase     | AI Vision          | GitHub     |
+| Tailwind CSS | REST APIs               | Storage      | Prompt Engineering | CI/CD      |
+| ShadCN UI    | Role Based Auth         | RLS Policies | AI Reports         | Production |
+
+# 📂 Project Structure
+
+```text
+threadcounty-ai-insights1
+│
+├── public/
+├── README/
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── hooks/
+│   ├── lib/
+│   ├── services/
+│   └── contexts/
+├── supabase/
+├── package.json
+└── README.md
+```
+# 📌 Project at a Glance
+
+| Feature | Status |
+|----------|--------|
+| Authentication | ✅ |
+| AI Fabric Analysis | ✅ |
+| Upload History | ✅ |
+| Admin Dashboard | ✅ |
+| Analytics | ✅ |
+| PDF Export | ✅ |
+| Responsive Design | ✅ |
+| Dark / Light Mode | ✅ |
+| Mobile Friendly | ✅ |
+
 # 📸 Application Preview
 
 ## 🏠 Landing Page
@@ -327,4 +435,85 @@ Display Dashboard
 ✔ Role-Based Access
 
 ---
+## 🎯 Vision
+
+ThreadCounty aims to modernize textile quality inspection by combining Artificial Intelligence, Computer Vision, and cloud technologies into a single intuitive platform.
+
+The platform helps:
+
+* Textile Manufacturers
+* Researchers
+* Students
+* Quality Control Engineers
+* Fabric Designers
+
+analyze fabrics quickly, accurately, and efficiently.
+
+## Why ThreadCounty?
+
+⭐ AI-Powered Fabric Analysis
+
+⭐ Production Ready Architecture
+
+⭐ Responsive Across All Devices
+
+⭐ Admin Dashboard
+
+⭐ Secure Authentication
+
+⭐ Analytics System
+
+⭐ PDF Report Generation
+
+⭐ Modern SaaS User Experience
+
+# 🚀 Future Enhancements
+
+- OCR Fabric Detection
+- Thread Density Measurement
+- AI Chat Assistant
+- Multi Language Support
+- PWA Support
+- Email Notifications
+- AI Comparison Tool
+- Fabric Recommendation Engine
+
+# 👨‍💻 Developer
+
+**Prajwal Karajange**
+
+B.Tech Information Technology (2023–2027)
+
+University Topper
+
+Full Stack Developer
+
+Java Backend Developer
+
+Passionate about AI, Cloud, and Scalable Web Applications
+
+### Connect
+
+* GitHub: https://github.com/prajwalkarajange
+* LinkedIn: https://www.linkedin.com/in/prajwalkarajange
+
+---
+
+If you found this project interesting, consider giving it a ⭐ on GitHub.
+---
+## 📄 License
+
+This project is developed for the **ThreadCounty Web Development Hackathon 2026**.
+
+For educational and demonstration purposes.
+
+<p align="center">
+
+Built with ❤️ using React, TypeScript, Supabase and Gemini AI.
+
+Created by Prajwal Karajange
+
+⭐ Thank you for visiting this repository.
+
+</p>
 
