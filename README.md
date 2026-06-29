@@ -120,6 +120,18 @@ Designed with scalability, security, and usability in mind, ThreadCounty demonst
 | Backend | Supabase |
 | Frontend | React + TypeScript |
 
+## 🔑 Demo Credentials
+
+To help the judges evaluate the complete platform, the following demo administrator account is available:
+
+| Role          | Email                                                               | Password            |
+| ------------- | ------------------------------------------------------------------- | ------------------- |
+| Administrator | threadcounty.admin@gmail.com                                        | Prajwal@4561        |
+
+> **Note:** These credentials are provided solely for the ThreadCounty Web Development Hackathon 2026 evaluation.
+
+
+
 # 🚀 Key Features
 
 ### 👤 Authentication
