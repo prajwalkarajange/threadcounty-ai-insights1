@@ -139,3 +139,192 @@ The platform combines a modern SaaS interface with secure authentication, analyt
 | Deployment     | Vercel                |
 
 ---
+# 📸 Application Preview
+
+## 🏠 Landing Page
+
+<p align="center">
+<img src="./README/landing.png" width="100%">
+</p>
+
+---
+
+## 📤 Fabric Upload
+
+<p align="center">
+<img src="./README/upload.png" width="100%">
+</p>
+
+---
+
+## 🤖 AI Analysis Report
+
+<p align="center">
+<img src="./README/analysis.png" width="100%">
+</p>
+
+---
+
+## 📚 Upload History
+
+<p align="center">
+<img src="./README/history.png" width="100%">
+</p>
+
+---
+
+## 📊 User Dashboard
+
+<p align="center">
+<img src="./README/dashboard.png" width="100%">
+</p>
+
+---
+
+## 👨‍💻 Admin Dashboard
+
+<p align="center">
+<img src="./README/admin-dashboard.png" width="100%">
+</p>
+
+---
+
+## 📈 Analytics Dashboard
+
+<p align="center">
+<img src="./README/analytics.png" width="100%">
+</p>
+
+---
+
+## 👥 User Management
+
+<p align="center">
+<img src="./README/users.png" width="100%">
+</p>
+
+---
+
+## 🌙 Dark Mode
+
+<p align="center">
+<img src="./README/darkmode1.png" width="100%">
+</p>
+
+---
+
+## 📱 Mobile Responsive
+
+<p align="center">
+<img src="./README/mobile.png" width="35%">
+</p>
+
+---
+
+# 🏗 System Architecture
+
+```text
+                    User
+                      │
+                      ▼
+            React + TypeScript
+                      │
+                      ▼
+          TanStack Router + ShadCN UI
+                      │
+                      ▼
+              Supabase Authentication
+                      │
+        ┌─────────────┴─────────────┐
+        ▼                           ▼
+ Upload Fabric                 User Dashboard
+        │                           │
+        └─────────────┬─────────────┘
+                      ▼
+                Gemini AI Analysis
+                      │
+                      ▼
+              AI Analysis Results
+                      │
+                      ▼
+            PostgreSQL (Supabase)
+                      │
+                      ▼
+        Analytics + Admin Dashboard
+```
+
+---
+
+# 🗄 Database Schema
+
+## Tables
+
+* profiles
+* uploads
+* analysis_results
+* user_roles
+
+---
+
+### Relationships
+
+```text
+profiles
+    │
+    ├──────── uploads
+    │             │
+    │             ▼
+    │      analysis_results
+    │
+    ▼
+user_roles
+```
+
+---
+
+# 🤖 AI Analysis Workflow
+
+```text
+Upload Image
+      │
+      ▼
+Validate Image
+      │
+      ▼
+Store in Supabase Storage
+      │
+      ▼
+Gemini AI Analysis
+      │
+      ▼
+Generate Report
+      │
+      ▼
+Store Results
+      │
+      ▼
+Display Dashboard
+```
+
+---
+
+# 📊 Admin Features
+
+✔ User Management
+
+✔ Upload Management
+
+✔ AI Analysis Monitoring
+
+✔ Analytics Dashboard
+
+✔ Platform Statistics
+
+✔ Search Users
+
+✔ Delete Records
+
+✔ Role-Based Access
+
+---
+
