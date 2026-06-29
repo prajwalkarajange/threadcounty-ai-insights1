@@ -25,7 +25,7 @@ export function SiteFooter() {
             <div className="mt-6 flex gap-3">
               {/* Email */}
               <a
-                href="mailto:pk3@gmail.com"
+                href="mailto:prajwalkarajange0409@gmail.com"
                 aria-label="Email"
                 className="grid h-9 w-9 place-items-center rounded-full border hover:border-thread hover:text-thread transition-all duration-300"
               >
@@ -115,8 +115,11 @@ export function SiteFooter() {
             © {new Date().getFullYear()} ThreadCounty · AI-powered textile intelligence
           </p>
           <p className="text-xs text-muted-foreground font-mono">
-            Built with ❤️ by Prajwal Karajange • ThreadCounty Hackathon 2026
+            Built with ❤️ by Prajwal Karajange | Submitted for ThreadCounty Web Development
+            Hackathon 2026
+            
           </p>
+          
         </div>
       </div>
     </footer>

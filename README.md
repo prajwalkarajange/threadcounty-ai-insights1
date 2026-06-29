@@ -10,6 +10,8 @@
 
 <img src="https://img.shields.io/badge/Gemini-AI-orange">
 
+<img src="https://img.shields.io/badge/Hackathon-ThreadCounty_2026-orange?style=for-the-badge">
+
 </p>
 
 <img src="./README/banner.png" width="100%">
@@ -28,6 +30,7 @@ AI-Powered Textile Analysis Platform for Smart Fabric Quality Inspection
 <p align="center">
 
 Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
+🚀 Built using React, TypeScript, Supabase, Google Gemini AI and deployed on Vercel.
 
 </p>
 
@@ -58,16 +61,20 @@ Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
 
 # 📑 Table of Contents
 
-- Live Demo
 - About
+- Hackathon Submission
 - Features
 - Tech Stack
+- Installation
+- Environment Variables
+- Project Structure
 - Screenshots
 - Architecture
-- Database
+- Database Schema
 - AI Workflow
 - Admin Features
 - Vision
+- Future Enhancements
 - Developer
 
 
@@ -98,6 +105,8 @@ Users can securely upload fabric images and receive AI-powered textile insights 
 - PDF Report
 
 The platform combines a modern SaaS interface with secure authentication, analytics, role-based administration, and a responsive design.
+
+Designed with scalability, security, and usability in mind, ThreadCounty demonstrates how AI can streamline textile quality inspection through a modern cloud-based web application.
 
 ---
 ## 🏆 Hackathon Submission
@@ -198,7 +207,8 @@ The platform combines a modern SaaS interface with secure authentication, analyt
 | React 19     | Supabase Edge Functions | PostgreSQL   | Gemini AI          | Vercel     |
 | TypeScript   | Supabase Auth           | Supabase     | Google Gemini AI   | GitHub     |
 | Tailwind CSS | REST APIs               | Storage      | Prompt Engineering | GitHub     |
-| ShadCN UI    | Role Based Auth         | RLS Policies | AI Reports         | Production |
+| ShadCN UI    | Role-Based Auth         | RLS Policies | Fabric Analysis    | Vercel     |
+
 
 # ⚙️ Installation
 
@@ -530,7 +540,7 @@ Passionate about AI, Cloud, and Scalable Web Applications
 ### Connect
 
 - GitHub: https://github.com/prajwalkarajange
-- LinkedIn: https://www.linkedin.com/in/prajwalkarajange
+- LinkedIn: https://www.linkedin.com/in/prajwal-karajange/
 
 ---
 
@@ -545,10 +555,10 @@ For educational and demonstration purposes.
 
 <p align="center">
 
-Built with ❤️ using React, TypeScript, Supabase and Gemini AI.
+Built with ❤️ by <b>Prajwal Karajange</b>
 
-Created by Prajwal Karajange
+Submitted for <b>ThreadCounty Web Development Hackathon 2026</b>
 
-⭐ Thank you for visiting this repository.
+⭐ If you found this project helpful, consider giving it a star.
 
 </p>
