@@ -10,7 +10,7 @@
 
 <img src="https://img.shields.io/badge/Gemini-AI-orange">
 
-<img src="https://img.shields.io/badge/Hackathon-ThreadCounty_2026-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/🏆_ThreadCounty-Hackathon_2026-orange?style=flat-square">
 
 </p>
 
@@ -78,7 +78,7 @@ Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
 - Developer
 
 
-<p align="center">
+<!-- <p align="center">
 
 <img src="https://img.shields.io/github/stars/prajwalkarajange/threadcounty-ai-insights1?style=social">
 
@@ -86,8 +86,8 @@ Modern SaaS Platform for Fabric Quality Analysis using Artificial Intelligence.
 
 <img src="https://img.shields.io/github/last-commit/prajwalkarajange/threadcounty-ai-insights1">
 
-</p>
----
+</p> -->
+
 
 # ✨ About The Project
 
@@ -537,28 +537,31 @@ Java Backend Developer
 
 Passionate about AI, Cloud, and Scalable Web Applications
 
-### Connect
+### 🌐 Connect
 
-- GitHub: https://github.com/prajwalkarajange
-- LinkedIn: https://www.linkedin.com/in/prajwal-karajange/
+- **GitHub:** https://github.com/prajwalkarajange
+- **LinkedIn:** https://www.linkedin.com/in/prajwal-karajange/
 
----
-
-If you found this project interesting, consider giving it a ⭐ on GitHub.
 ---
 
 ## 📄 License
 
-This project is developed for the **ThreadCounty Web Development Hackathon 2026**.
+This project was developed for the **ThreadCounty Web Development Hackathon 2026** and is shared for educational and demonstration purposes.
 
-For educational and demonstration purposes.
+---
 
 <p align="center">
 
-Built with ❤️ by <b>Prajwal Karajange</b>
+<b>Built with ❤️ by Prajwal Karajange</b>
 
-Submitted for <b>ThreadCounty Web Development Hackathon 2026</b>
+<br>
 
-⭐ If you found this project helpful, consider giving it a star.
+🚀 Submitted for the <b>ThreadCounty Web Development Hackathon 2026</b>
+
+<br>
+
+⭐ If you found this project helpful, consider giving it a star on GitHub.
 
 </p>
+
+
