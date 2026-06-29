@@ -62,7 +62,10 @@ function HistoryPage() {
           <h1 className="mt-2 font-display text-4xl sm:text-5xl">Upload history</h1>
           <p className="mt-2 text-sm text-muted-foreground">Every fabric you've analyzed.</p>
         </div>
-        <Button asChild className="gradient-thread text-[color:var(--accent-foreground)] border-0 shrink-0">
+        <Button
+          asChild
+          className="gradient-thread text-[color:var(--accent-foreground)] border-0 shrink-0"
+        >
           <Link to="/upload">
             <Sparkles className="mr-2 h-4 w-4" /> New analysis
           </Link>
@@ -118,7 +121,11 @@ function HistoryPage() {
               >
                 <div className="relative aspect-[4/3] bg-muted">
                   {u.signed_url ? (
-                    <img src={u.signed_url} alt={u.original_name ?? "fabric"} className="absolute inset-0 h-full w-full object-cover" />
+                    <img
+                      src={u.signed_url}
+                      alt={u.original_name ?? "fabric"}
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
                   ) : (
                     <div className="absolute inset-0 grid place-items-center">
                       <ImageOff className="h-8 w-8 text-muted-foreground" />
@@ -127,7 +134,9 @@ function HistoryPage() {
                   {a?.quality_score != null && (
                     <div className="absolute top-3 right-3 glass rounded-full pl-2 pr-3 py-1 flex items-center gap-2">
                       <CircularGauge value={Number(a.quality_score)} size={28} />
-                      <span className="font-mono text-xs">{Math.round(Number(a.quality_score))}</span>
+                      <span className="font-mono text-xs">
+                        {Math.round(Number(a.quality_score))}
+                      </span>
                     </div>
                   )}
                 </div>
@@ -141,12 +150,14 @@ function HistoryPage() {
                     </div>
                     {a?.confidence != null && (
                       <Badge variant="secondary" className="font-mono text-[10px]">
-                        {(Number(a.confidence) * 100).toFixed(0)}%
+                        {Math.round(Number(a.confidence))}%
                       </Badge>
                     )}
                   </div>
                   <div className="mt-3 flex items-center justify-between">
-                    <span className="text-xs text-muted-foreground truncate max-w-[60%]">{u.original_name}</span>
+                    <span className="text-xs text-muted-foreground truncate max-w-[60%]">
+                      {u.original_name}
+                    </span>
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -155,7 +166,11 @@ function HistoryPage() {
                       className="text-muted-foreground hover:text-destructive transition-colors"
                       aria-label="Delete"
                     >
-                      {del.isPending ? <Loader2 className="h-4 w-4 animate-spin" /> : <Trash2 className="h-4 w-4" />}
+                      {del.isPending ? (
+                        <Loader2 className="h-4 w-4 animate-spin" />
+                      ) : (
+                        <Trash2 className="h-4 w-4" />
+                      )}
                     </button>
                   </div>
                 </div>
@@ -183,7 +198,11 @@ function HistoryPage() {
                   <tr key={u.id} className="hover:bg-muted/40">
                     <td className="p-2">
                       {u.signed_url ? (
-                        <img src={u.signed_url} alt="" className="h-12 w-12 rounded-md object-cover" />
+                        <img
+                          src={u.signed_url}
+                          alt=""
+                          className="h-12 w-12 rounded-md object-cover"
+                        />
                       ) : (
                         <div className="h-12 w-12 rounded-md bg-muted grid place-items-center">
                           <ImageOff className="h-4 w-4 text-muted-foreground" />
@@ -203,9 +222,11 @@ function HistoryPage() {
                       {new Date(u.created_at).toLocaleDateString()}
                     </td>
                     <td className="p-3 hidden md:table-cell font-mono text-xs">
-                      {a?.confidence != null ? `${(Number(a.confidence) * 100).toFixed(0)}%` : "—"}
+                      {a?.confidence != null ? `${Math.round(Number(a.confidence))}%` : "—"}
                     </td>
-                    <td className="p-3 font-mono text-xs">{a?.quality_score != null ? Math.round(Number(a.quality_score)) : "—"}</td>
+                    <td className="p-3 font-mono text-xs">
+                      {a?.quality_score != null ? Math.round(Number(a.quality_score)) : "—"}
+                    </td>
                     <td className="p-3">
                       <button
                         onClick={() => confirm("Delete this upload?") && del.mutate(u.id)}
@@ -233,8 +254,13 @@ function EmptyState() {
         <Sparkles className="h-6 w-6 text-[color:var(--accent-foreground)]" />
       </div>
       <h3 className="mt-6 font-display text-2xl">Nothing analyzed yet</h3>
-      <p className="mt-2 text-sm text-muted-foreground">Upload your first fabric photo to get started.</p>
-      <Button asChild className="mt-6 gradient-thread text-[color:var(--accent-foreground)] border-0">
+      <p className="mt-2 text-sm text-muted-foreground">
+        Upload your first fabric photo to get started.
+      </p>
+      <Button
+        asChild
+        className="mt-6 gradient-thread text-[color:var(--accent-foreground)] border-0"
+      >
         <Link to="/upload">Upload fabric</Link>
       </Button>
     </div>

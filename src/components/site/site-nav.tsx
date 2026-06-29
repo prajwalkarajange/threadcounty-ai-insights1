@@ -66,7 +66,22 @@ export function SiteNav() {
                 <DropdownMenuTrigger asChild>
                   <Button
                     variant="ghost"
-                    className="hidden lg:flex items-center gap-3 rounded-full h-12 px-3 hover:bg-muted"
+                    className="
+hidden lg:flex
+items-center
+gap-3
+h-12
+px-3
+rounded-full
+
+border-border
+bg-card
+text-foreground
+transition-colors
+hover:bg-muted
+dark:bg-card
+dark:hover:bg-muted
+"
                   >
                     <div className="h-10 w-10 overflow-hidden rounded-full border-2 border-orange-500">
                       {profile?.avatar_url ? (
@@ -84,8 +99,8 @@ export function SiteNav() {
                       )}
                     </div>
 
-                    <div className="text-left leading-tight">
-                      <p className="font-semibold text-sm">
+                    <div className="text-left leading-tight text-foreground">
+                     <p className="font-semibold text-sm text-foreground">
                         {profile?.full_name || user.user_metadata?.full_name}
                       </p>
 
@@ -98,7 +113,19 @@ export function SiteNav() {
                   </Button>
                 </DropdownMenuTrigger>
 
-                <DropdownMenuContent align="end" className="w-72 rounded-2xl p-2">
+              <DropdownMenuContent
+  align="end"
+  className="
+    w-72
+    rounded-2xl
+    p-2
+    border
+    bg-background
+    text-foreground
+    shadow-xl
+    dark:border-slate-700
+  "
+>
                   <div className="flex items-center gap-3 px-3 py-3">
                     <div className="h-12 w-12 overflow-hidden rounded-full border-2 border-orange-500">
                       {profile?.avatar_url ? (
@@ -121,15 +148,9 @@ export function SiteNav() {
 
                       <p className="text-sm text-muted-foreground">
                         {profile?.email || user.email}
-                        
                       </p>
                       <p className="text-xs text-orange-500 mt-1">Welcome back 👋</p>
-                      
                     </div>
-                    
-
-                   
-                    
                   </div>
 
                   <DropdownMenuSeparator />
@@ -159,7 +180,7 @@ export function SiteNav() {
 
                   <DropdownMenuItem
                     onClick={() => supabase.auth.signOut()}
-                  className="text-red-500 focus:text-white focus:bg-red-500"
+                    className="text-red-500 focus:text-white focus:bg-red-500"
                   >
                     <LogOut className="mr-2 h-4 w-4" />
                     Sign Out

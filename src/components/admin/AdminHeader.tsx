@@ -43,7 +43,7 @@ export default function AdminHeader() {
 
             <DropdownMenuSeparator />
 
-            <DropdownMenuItem>No new notifications</DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer focus:bg-accent focus:text-accent-foreground">No new notifications</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
 
@@ -63,7 +63,7 @@ export default function AdminHeader() {
           </DropdownMenuTrigger>
 
           <DropdownMenuContent align="end" className="w-64 bg-popover text-popover-foreground">
-            <div className="px-3 py-3">
+            <div className="px-3 py-3 border-b">
               <p className="font-semibold">{profile?.full_name}</p>
 
               <p className="text-sm text-muted-foreground">{profile?.email}</p>
@@ -71,12 +71,12 @@ export default function AdminHeader() {
 
             <DropdownMenuSeparator />
 
-            <DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer focus:bg-accent focus:text-accent-foreground">
               <User className="mr-2 h-4 w-4" />
               Profile
             </DropdownMenuItem>
 
-            <DropdownMenuItem>
+            <DropdownMenuItem className="cursor-pointer focus:bg-accent focus:text-accent-foreground">
               <Settings className="mr-2 h-4 w-4" />
               Settings
             </DropdownMenuItem>
